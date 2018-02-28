@@ -7,6 +7,7 @@ class ProjectItem extends Component {
     // console.log(this.props);
     return (
       //track content div
+      // todo: make link dynamic, pass prop from projects
 <div>
       <li className="ProjectItem">
       {this.props.project.uploader} - <strong> {this.props.project.title} </strong> <a href="https://ipfs.io/ipfs/QmVQBDZWsiYGwpbbie7wGcbUDpJgcUetkNSs9t95Jkz89c">({this.props.project.hash})</a>

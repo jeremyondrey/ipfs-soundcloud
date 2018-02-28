@@ -3,7 +3,6 @@ import Projects from './Components/Projects';
 import AddProject from './Components/AddProject';
 import ReactAudioPlayer from 'react-audio-player';
 import './App.css';
-var fileUrl ='https://ipfs.io/ipfs/' + 'QmfHPsUQtszrSqFRad46RzyqT6UEJAVZ2BnZKGXRnP4Frs';
 class App extends Component {
   constructor(){
     super();
