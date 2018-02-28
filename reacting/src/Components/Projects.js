@@ -6,10 +6,11 @@ class Projects extends Component {
   render() {
     let projectItems;
     if(this.props.projects){
+      // console.log(this.props.projects);
       projectItems = this.props.projects.map(project => {
         // console.log(track);
         return (
-        <ProjectItem key={project.hash} project={project} />
+        <ProjectItem key={project.hash} project={project}/>
       );
       });
     }

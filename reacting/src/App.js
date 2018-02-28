@@ -36,13 +36,15 @@ class App extends Component {
 
 
   render() {
+
+
     return (
       //main div, contains various components
       <div className="App">
-        <h1> dapster </h1>
+        <h1 className="App-header"> dapster </h1>
+        <Projects projects={this.state.projects}/>
         <AddProject />
-        <Projects projects={this.state.projects} />
-        <ReactAudioPlayer
+        <ReactAudioPlayer className="Footer"
   src='https://ipfs.io/ipfs/QmfHPsUQtszrSqFRad46RzyqT6UEJAVZ2BnZKGXRnP4Frs'
   autoPlay
   controls

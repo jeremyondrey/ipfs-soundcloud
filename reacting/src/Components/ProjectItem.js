@@ -4,15 +4,16 @@ class ProjectItem extends Component {
   // let fileURL = "" + "{this.props.project.hash}";
 
   render() {
-    // console.log(this.props);
+
+    let fileURL = "https://ipfs.io/ipfs/" + this.props.project.hash
+    console.log(fileURL);
     return (
       //track content div
-      // todo: make link dynamic, pass prop from projects
 <div>
       <li className="ProjectItem">
-      {this.props.project.uploader} - <strong> {this.props.project.title} </strong> <a href="https://ipfs.io/ipfs/QmVQBDZWsiYGwpbbie7wGcbUDpJgcUetkNSs9t95Jkz89c">({this.props.project.hash})</a>
-
+      artist: {this.props.project.uploader} - <strong> {this.props.project.title} </strong> (<a href={fileURL} className="trackLink">{this.props.project.hash}</a>)
       </li>
+
 </div>
     );
   }
