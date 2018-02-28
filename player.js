@@ -1,9 +1,11 @@
+let  userLibraryHash = 'Qmaj4JL68d2zMpQFMaq4iLCsxMyYjiY2oezVKSepsgs3L4'
+
 angular.module("player", []).controller("audioplayer",
 function($scope, $http)
 {
     $scope.prefix = "https://ipfs.io/ipfs/";
     $scope.list = null;
-    $http.get('https://ipfs.io/ipfs/QmQGbk9CEvJMKZFnU4QSkfq9ev3QWmfUtWuAw9e2eXZGUa')
+    $http.get('https://ipfs.io/ipfs/'+ userLibraryHash)
             .then(function(res){
                 $scope.list = Array.from(res.data);
             })
