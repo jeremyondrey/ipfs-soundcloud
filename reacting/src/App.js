@@ -44,7 +44,7 @@ class App extends Component {
         <AddProject />
         <Projects projects={this.state.projects} />
         <ReactAudioPlayer
-  src='fileURL'
+  src='https://ipfs.io/ipfs/QmfHPsUQtszrSqFRad46RzyqT6UEJAVZ2BnZKGXRnP4Frs'
   autoPlay
   controls
 />
