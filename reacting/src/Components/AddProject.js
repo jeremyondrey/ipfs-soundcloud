@@ -15,7 +15,10 @@ class AddProject extends Component {
     if (this.refs.title.value === '') {
       alert('title required');
     } else {
-      
+      this.setState({newProject:{
+        title:this.refs.title.value,
+        category: this.refs.category.value
+      }});
     }
     console.log('submitted');
     e.preventDefault();

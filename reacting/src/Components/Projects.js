@@ -5,12 +5,13 @@ class Projects extends Component {
 
   render() {
     let projectItems;
+    let handleClick=this.props.handleClick;
     if(this.props.projects){
       // console.log(this.props.projects);
       projectItems = this.props.projects.map(project => {
         // console.log(track);
         return (
-        <ProjectItem key={project.hash} project={project}/>
+        <ProjectItem key={project.hash} project={project} handleClick={handleClick}/>
       );
       });
     }

@@ -11,7 +11,13 @@ class App extends Component {
     this.state = {
       projects: []
     }
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick(e) {
+    e.preventDefault();
+    console.log(e);
+}
 
   componentWillMount(){
     this.setState({projects: [
@@ -23,7 +29,7 @@ class App extends Component {
       {
         title: 'amen dub',
         uploader: 'lums',
-        hash: 'QmVQBDZWsiYGwpbbie7wGcbUDpJgcUetkNSs9t95Jkz89c'
+        hash: 'QmQHfLScH69i6rmso2Vn3Tu2fhgJntYo6jMQqAEfvruCUb'
       },
       {
         title: 'ting with richard',
@@ -35,20 +41,28 @@ class App extends Component {
 
 
 
-  render() {
 
+  render() {
+    let audioSrc='https://ipfs.io/ipfs/QmQHfLScH69i6rmso2Vn3Tu2fhgJntYo6jMQqAEfvruCUb';
+
+    function handleClick(e) {
+      e.preventDefault();
+      console.log(e);
+    }
 
     return (
       //main div, contains various components
       <div className="App">
-        <h1 className="App-header"> dapster </h1>
-        <Projects projects={this.state.projects}/>
+        <h1 className="App-header"> crate </h1>
+        <Projects projects={this.state.projects} handleClick={handleClick}/>
         <AddProject />
+        <h1>alpha</h1>
         <ReactAudioPlayer className="Footer"
-  src='https://ipfs.io/ipfs/QmfHPsUQtszrSqFRad46RzyqT6UEJAVZ2BnZKGXRnP4Frs'
-  autoPlay
+  src={audioSrc}
+
   controls
 />
+
       </div>
     );
   }
